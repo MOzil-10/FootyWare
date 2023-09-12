@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "name": "sdg",
+      "email": "dfg@gmail.com",
+      "username": "fdgdf",
+      "password": "Mukosi@10",
+      "confirmPassword": "Mukosi@10",
+      "id": 1
+    },
+    {
+      "name": "Mukosi Ozil",
+      "email": "mukso@gmail.com",
+      "username": "Mukosi0",
+      "password": "Mesut@10",
+      "confirmPassword": "Mesut@10",
+      "id": 2
+    },
+    {
+      "name": "Rabeh ",
+      "email": "rabe@gmail.com",
+      "username": "rabeh10",
+      "password": "Letsdoit!10",
+      "confirmPassword": "Letsdoit!10",
+      "id": 3
+    }
+  ],
+  "products": []
+}
