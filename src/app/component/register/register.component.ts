@@ -1,6 +1,9 @@
+
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CustomvalidationServiceService } from 'src/app/service/customvalidation-service.service';
+import { UsersService } from 'src/app/service/users.service';
+import { User } from 'src/app/shared/user';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +14,11 @@ export class RegisterComponent {
   registerForm!: FormGroup;
   submitted = false;
 
-  constructor( private fb: FormBuilder,private customValidator: CustomvalidationServiceService) { }
+  constructor( 
+    private fb: FormBuilder,
+    private customValidator: CustomvalidationServiceService,
+    private users: UsersService
+    ) { }
 
   ngOnInit() {
     this.registerForm = this.fb.group({
@@ -34,8 +41,23 @@ export class RegisterComponent {
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.valid) {
-      alert('Form Submitted succesfully!!!\n Check the values in browser console.');
-      console.table(this.registerForm.value);
+     
+      const userData: User = this.registerForm.value;
+
+      this.users.addUser(userData)
+      .subscribe(
+        (response)=>{
+          alert('Registration successful')
+          console.log('response', response);
+          this.registerForm.reset();
+          
+        },
+        (error) => {
+          alert('Registration failed!');
+          console.error('Error:', error);
+        }
+
+      );
     }
   }
 }
