@@ -8,9 +8,9 @@ import { ProductsService } from 'src/app/service/products.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  footballKits: FootballKit[] = []; 
+  originalFootballKits: FootballKit[] = [];
+  footballKits: FootballKit[] = [];
   searchTerm: string = '';
-  dataSource: any;
 
   constructor(private products: ProductsService) {}
 
@@ -19,13 +19,28 @@ export class DashboardComponent implements OnInit {
   }
 
   fetchProducts() {
-    this.products.getProduct().subscribe((res: FootballKit[]) => { 
-      this.footballKits = res;
+    this.products.getProduct().subscribe((res: FootballKit[]) => {
+      this.originalFootballKits = res;
+      this.resetFilter();
     });
   }
 
   applyFilter(): void {
     const filterValue = this.searchTerm.trim().toLowerCase();
-    this.dataSource.filter = filterValue;
+    if (filterValue) {
+      this.footballKits = this.originalFootballKits.filter(kit => {
+        return (
+          kit.name.toLowerCase().includes(filterValue) ||
+          kit.description.toLowerCase().includes(filterValue)
+        );
+      });
+    } else {
+      this.resetFilter();
+    }
+  }
+
+  resetFilter(): void {
+    this.searchTerm = '';
+    this.footballKits = [...this.originalFootballKits];
   }
 }

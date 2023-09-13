@@ -1,7 +1,4 @@
-.navbar{
-    background-color: #82A0D8;
 
-}
 .image{
     width: 100%;
 }
@@ -40,10 +37,10 @@ h4{
     text-align: center;
 
 }
-/* .col-md-6{
-    width: 150%;
-    margin-left: 151%;
-} */
+h1{
+    text-align: center;
+    color: #000;
+}
 .container{
     margin-left: 25%;
     width: 80%;
