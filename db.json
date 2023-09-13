@@ -25,5 +25,62 @@
       "id": 3
     }
   ],
-  "products": []
+  "products": [
+{
+  "name": "Arsenal",
+  "description": "Away kit",
+  "price": "R1 200",
+  "picture": "assets/images/mhr6935_f.jpeg"
+},
+{
+  "name": "Real Madrid ",
+  "description": "Away kit",
+  "price": "R1 200",
+  "picture": "assets/images/real-madrid-and-adidas-unveil-third-kit-jersey-2023-24-1.jpg"
+},
+{
+  "name": "Arsenal ",
+  "description": "LONG SLEEVE Third kit ",
+  "price": "R1 500",
+  "picture": "assets/images/mhz2114_f.jpeg"
+},
+{
+  "name": "Arsenal  ",
+  "description": "Away ",
+  "price": "R1 200",
+  "picture": "assets/images/HR6927_HM30.avif"
+},
+{
+  "name": "Manchester United ",
+  "description": " Away kit  ",
+  "price": "R1 200",
+  "picture": "assets/images/Manchester United 23-24 Away Kit (26).jpg"
+},
+{
+  "name": "Manchester City Away  ",
+  "description": "Away Kit ",
+  "price": "R1 200",
+  "picture": "assets/images/img_2413-1024x1024.webp"
+},
+{
+  "name": "Manchester City Home",
+  "description": "Home Kit ",
+  "price": "R1 200",
+  "picture": "assets/images/png.avif"
+}
+,
+{
+  "name": "Real Madrid Home ",
+  "description": "Home Kit  ",
+  "price": "R1 200",
+  "picture": "assets/images/85017686-1200-1200.jpeg"
+}
+,
+{
+  "name": "Newcastle United Home ",
+  "description": "Home Kit  ",
+  "price": "R1 200",
+  "picture": "assets/images/image_36714aaf-3c2c-4f9e-b28c-7b5deb60d9b5.webp"
+}
+  ]
 }
