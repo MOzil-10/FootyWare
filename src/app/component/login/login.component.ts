@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,11 @@ export class LoginComponent {
   public loginForm!: FormGroup;
   public submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -32,14 +37,24 @@ export class LoginComponent {
     return this.loginForm.controls;
   }
 
-  onLogin(): void {
-    // console.log(this.loginForm.value);
+  onLogin() {
     this.submitted = true;
+
     if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
-      localStorage.setItem("user-Data", JSON.stringify(this.loginForm.value));
-      this.router.navigate(["/"]);
+      const email = this.loginForm.get('email')?.value;
+      const password = this.loginForm.get('password')?.value;
+
+      this.authService.login(email, password).subscribe(
+        (response) => {
+          console.log('Login successful', response);
+         
+          this.router.navigate(['/dashboard']);
+        },
+        (error) => {
+          console.error('Login error', error);
+          
+        }
+      );
     }
   }
 }
-
