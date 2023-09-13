@@ -8,6 +8,9 @@ import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { KitDetailsComponent } from './component/kit-details/kit-details.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +18,17 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    KitDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
    
   ],
   providers: [],
