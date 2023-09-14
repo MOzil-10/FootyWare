@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FootballKit } from 'src/app/football-kit';
 import { ProductsService } from 'src/app/service/products.service';
@@ -12,7 +13,7 @@ export class DashboardComponent implements OnInit {
   footballKits: FootballKit[] = [];
   searchTerm: string = '';
 
-  constructor(private products: ProductsService) {}
+  constructor(private products: ProductsService, private router:Router) {}
 
   ngOnInit() {
     this.fetchProducts();
@@ -43,4 +44,8 @@ export class DashboardComponent implements OnInit {
     this.searchTerm = '';
     this.footballKits = [...this.originalFootballKits];
   }
+handleClick(){
+ 
+ this.router.navigate(['/kit']) 
+}
 }

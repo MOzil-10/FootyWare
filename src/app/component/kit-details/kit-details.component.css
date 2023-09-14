@@ -1,0 +1,31 @@
+.card{
+    height: 80vh;
+    margin: 6%;
+}
+
+.content{
+    margin-top: 10%;
+    border: solid #ccc;
+   margin-left: 65vw;
+   height: 35vh;
+  margin-bottom: 30px;
+}
+.btn{
+    width: 10vw;
+    background-color: #000;
+    margin-left: 25%;
+    margin-top: 15%;
+    color: #ccc;
+}
+.card-title{
+    text-align: center;
+    margin-top: 5%;
+}
+#size{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.size{
+    text-align: center;
+}

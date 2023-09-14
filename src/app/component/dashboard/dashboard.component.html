@@ -17,7 +17,7 @@
     <div class="card" style="width: 18rem;" *ngFor="let kit of footballKits">
       <h2>{{kit.name}}</h2>
       <h3> {{kit.description}}</h3>
-      <img class="image" [src]="kit.picture">
+      <img class="image" [src]="kit.picture" (click)="handleClick()">
       <div class="card-body">
         <h4>{{kit.price}}</h4>
       </div>
