@@ -1,23 +1,22 @@
 h1{
     text-align: center;
     margin-top: 10%;
-    color: aliceblue;
+    color: #364968;
 }
 p{
     text-align: center;
     margin-top: 5%;
-    color: aliceblue;
+    color: #364968;
 }
 .btn{
-   background-color: blueviolet;
+   background-color: #364968;
    margin-left: 46%;
    margin-top: 1%;
    color: aliceblue;
    margin-bottom: 1%;
 }
-body{
-   background-image: url(  "/assets/images/braden-hopkins-s6y5jURGxkU-unsplash.jpg" );
-}
+
+  
 .container{
     display: flex;
     padding: 5%;
@@ -25,7 +24,7 @@ body{
  
 }
 .card-text{
-    color: blueviolet;
+    color: #364968;
 }
 .card{
     margin-left: 4%;
