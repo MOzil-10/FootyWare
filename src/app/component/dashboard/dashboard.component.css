@@ -45,3 +45,7 @@ h1{
     margin-left: 25%;
     width: 80%;
 }
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.06);
+}

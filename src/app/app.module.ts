@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { KitDetailsComponent } from './component/kit-details/kit-details.component';
+import { CartComponent } from './component/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { KitDetailsComponent } from './component/kit-details/kit-details.compone
     HomeComponent,
     DashboardComponent,
     NavbarComponent,
-    KitDetailsComponent
+    KitDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
