@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FootballKit } from 'src/app/football-kit';
 import { ProductsService } from 'src/app/service/products.service';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   footballKits: FootballKit[] = [];
   searchTerm: string = '';
 
-  constructor(private products: ProductsService, private router:Router) {}
+  constructor(private products: ProductsService, private router:Router ,private cart:CartService) {}
 
   ngOnInit() {
     this.fetchProducts();
@@ -47,5 +48,10 @@ export class DashboardComponent implements OnInit {
 handleClick(){
  
  this.router.navigate(['/kit']) 
+}
+
+addToCart(kit: any){
+
+  this.cart.addToCart(kit);
 }
 }
