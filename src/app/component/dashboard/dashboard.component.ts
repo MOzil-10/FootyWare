@@ -18,6 +18,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.fetchProducts();
+
+    this.originalFootballKits.forEach((a:any)=>{
+Object.assign(a,{quantity:1,total:a.price})
+    });
   }
 
   fetchProducts() {

@@ -27,18 +27,21 @@ productList = new BehaviorSubject<any>([]);
 
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
-    this.getTotalProce();
+    this.getTotalPrice();
+    console.log(this.cartItemList);
+    
   }
   
-  getTotalProce(){
-
-    let grandTotal=0;
-    this.cartItemList.map((a:any)=>{
-      grandTotal +=a.total;
-    }
-   
-    );
+  getTotalPrice(): number {
+    let grandTotal = 0;
+    this.cartItemList.map((a: any) => {
+      grandTotal += a.total;
+    });
+    console.log('cartItemList:', this.cartItemList);
+    console.log('grandTotal:', grandTotal);
+    return grandTotal;
   }
+  
 
   removeCartItem(product : any){
 this.cartItemList.map((a:any, index:any)=>{
@@ -50,7 +53,7 @@ this.cartItemList.map((a:any, index:any)=>{
 
 })
 
-
+this.productList.next(this.cartItemList);
   }
 
   removeAllCart(){
